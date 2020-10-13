@@ -1,0 +1,190 @@
+.main-header {
+    position: relative;
+    background-color: white;
+    padding: 1rem 0;
+    transition: all 0.4s ease;
+
+    @include media($default) {
+        padding: 24.02px 0;
+    }
+    
+    .navigation {
+        display: flex;
+        align-items: center;
+        width:calc(100% - 3rem);
+        margin: 0 auto;
+        justify-content: space-between;
+        min-height: 5rem;
+
+        @include media($large) {
+            width:calc(100% - 17rem);
+        }
+        
+        .logo {
+            margin-right: 3.2rem;
+            max-width: 10rem;
+        
+            @include  media($default) {
+                max-width: 16.8rem;
+            }
+            a {
+                display: flex;
+                flex-direction: column;
+                span {
+                    padding-left: 5px;
+                    font-size: 1.4rem;
+                    display: none;
+                    @include media($default) {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .menu-items {
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            @include media($default) {
+                width: calc(100% - 200px);
+                display: flex;
+            }
+            .search-box {
+                position: relative;
+                min-width: 20px;
+                
+
+                input  {
+                    padding-left: 4.7rem;
+                    padding-right: 2rem;
+                    background: #fafafa;
+                    border: 1px solid #EEEEEE;
+                    box-sizing: border-box;
+                    box-shadow: inset 0px 1px 5px rgba(209, 209, 209, 0.5);
+                    border-radius: 25px;
+                    height: 50px;
+                    width: 24rem;
+                    font-size: 1.6rem;
+                    color: #8a8a8a;
+                    display: none;
+                    @include media($default) {
+                        display: block;
+                    }
+                    @include media($large) {
+                        width: 35rem;
+                    }
+                    @include media($xlarge) {
+                        width: 50rem;
+                    }
+                }
+                .search-icon {
+                    position: absolute;
+                    position: absolute;
+                    top: calc(50% - 0.9rem);
+                    left:-1rem;
+                    @include media($default) {
+                        left: 20px;
+                    }
+                    img {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                    }
+                }
+            }
+        }
+        .circle-text {
+            display: flex;
+            align-items: center;
+            .circle {
+                border-right: 1px solid #E3EAF2;
+                display: none;
+                @include media($default) {
+                    display: block;
+                }
+                &.c-1 {
+                    a {
+                        background-color: #25C16F;
+                    }
+                }
+                &.c-2 {
+                    a {
+                        background-color: #CC4783;
+                    }
+                }
+                &.c-3 {
+                    a {
+                        background-color: #8847CC;
+                    }
+                }
+                a {
+                    margin:0 0.95rem ;
+                    background-color: #25C16F;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 14px;
+                    border-radius: 100%;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+            .drop-arrow {
+                margin-left:0.95rem;
+                margin-right: 2.8rem;
+                display: none;
+                @include media($default) {
+                    display: block;
+                }
+            }
+            .notification-bar {
+                display: flex;
+                align-items: center;
+                .btn {
+                    display: none;
+                    margin-right: 1rem;
+                    @include media($default) {
+                        display: block;
+                    }
+                }
+                .notification-logos {
+                    a {
+                        width: 2rem;
+                        margin:0 1rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+.hamburger {
+    display: none;
+    @include media($default) {
+        display: block;
+    }
+    
+    a {
+        margin-left: 1rem;
+        width: 3.8rem;
+        height: 3.8rem;
+        background: $orange;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 1rem;
+        span {
+            width: 100%;
+            margin: 3px 0;
+            border-radius: 2px;
+            border: 1px solid #fff;
+        }
+    }
+
+}

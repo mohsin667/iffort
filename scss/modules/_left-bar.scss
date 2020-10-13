@@ -1,0 +1,149 @@
+.left-bar {
+    width: 22.5rem;
+    background-color: transparent;
+    padding-top: 0;
+    .h-s {
+        padding-top: 2rem;
+        display: block;
+        padding-bottom: 1.4rem;
+        @include basic;
+        background-color: #fff;
+        .h-s-slide {
+            width: 6.4rem;
+            height: 2.8rem;
+            float: right;
+            margin-right: 2rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: $base;
+            border-radius: 3rem;
+            align-items: center;
+            padding: 0 0.2rem;
+            cursor: pointer;
+            position: relative;
+            span {
+                width: 50%;
+                text-align: center;
+                color: $border-color;
+                user-select: none;
+            }
+            a {
+                width: 2.8rem;
+                height: 2.8rem;
+                position: absolute;
+                background: #FFFFFF;
+                border: 1px solid #E3EAF2;
+                box-shadow: 0px 2px 3px rgba(219, 219, 219, 0.5);
+                border-radius: 100%;
+                left: 3.6rem;
+                transition: $transition;
+                @include flex;
+                img {
+                    transition: $transition;
+                    width: 1rem;
+                    height: .5rem;
+                    transform: rotate(90deg);
+                }
+            }
+            &.rotate {
+                a {
+                    left: 0;
+                    img {
+                        transform: rotate(-90deg)
+                    }
+                }
+            }
+        }
+    }
+    .left-side-bar {
+        @include basic;
+        @include transition;
+        background-color: #fff;
+        position: relative;
+        left: 0;
+        &.slideToggle {
+            left: -22.6rem;
+        }
+        .heading {
+            padding: .5rem  2.5rem .5rem  3.5rem;  
+            background-color: $light-orange;
+            @include basic;
+            p {
+                font-size: 1.4rem;
+                padding: 0;
+            }
+        }
+        .panel {  
+            @include basic;
+            display: block;
+            padding: .5rem  2.5rem .5rem  3.5rem;
+            p {
+                font-size: 1.4rem;
+                padding: 0;
+            }
+            .list {
+                border-top: 1px solid #E3EAF2;
+                margin-top: 1rem;
+                ul {
+                    margin: 0;
+                    ul {
+                        margin-top: 1.6rem;
+                        border-top: 1px solid #E3EAF2;
+                        padding-left: 2rem;
+                        display: none;
+                        li {
+                            padding: 1.3rem 0; 
+                            a  {
+                                &::before,&::after {
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+                    li {
+                        padding: 1.6rem 0;
+                        border-bottom: 1px solid #E3EAF2;
+                        &:first-child {
+                            ul {
+                                display: block;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: transparent;
+                        }
+                        &.active {
+                            a  {
+                                &::after {
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+                        a {
+                            font-size: 1.4rem;
+                            position: relative;
+                            &::before  {
+                                content: "";
+                                position: absolute;
+                                width: 1rem;
+                                height: 0.2rem;
+                                background-color: #F88822;
+                                top: 0.8rem;
+                                left: -2rem;
+                            }
+                            &::after  {
+                                transform: rotate(90deg);
+                                content: "";
+                                position: absolute;
+                                width: 1rem;
+                                height: 0.2rem;
+                                background-color: #F88822;
+                                top: 0.8rem;
+                                left: -2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

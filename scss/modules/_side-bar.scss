@@ -1,0 +1,72 @@
+
+.side-bar {
+    width: 32.8rem;
+    .d-card {
+        padding: 0 5.4rem;
+        padding-top: 2rem;
+        border-radius: 5px;
+        padding-bottom: 2rem;
+        background-color: #fff;
+        .card {
+            display: flex;
+            margin-bottom: 2rem;
+            .card-image {
+                margin-right: 1.5rem;
+                padding-top:1rem ;
+                width:4rem;
+            }
+            .card-text {
+                padding-right: 2rem;
+                color: #000;
+                width: calc(100% - 4rem);
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }    
+    .offer-section {
+        padding: 0 3.5rem;
+        margin-top: 5rem;
+        h3 {
+            color: #000;
+            margin-bottom: 3.5rem;
+        }
+        .of-card {
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 5rem;
+            .of-image {
+                width: 100%;
+                min-height: 16.8rem;
+            }
+            .of-card-text {
+                color: #000;
+                background-color: #fff;
+                padding: 2rem 3rem 4.4rem;
+                h2 {
+                    font-family: $regular;
+                }
+                a {
+                    color:$orange;
+                    font-size: 1.4rem;
+                    position: relative;
+                    user-select: none;
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: $orange;
+                        position: absolute;
+                        bottom: -.2rem;
+                        left: 0;
+                    }
+    
+                }
+            }
+        }
+    }
+}
