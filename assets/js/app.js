@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    $(".menu").on("click",function(){
+        $("nav").toggleClass("open")
+    })
+   
+   
     $(".h-s-slide").on("click", function () {
         $(this).toggleClass("rotate");
         $(".left-side-bar").toggleClass("slideToggle");

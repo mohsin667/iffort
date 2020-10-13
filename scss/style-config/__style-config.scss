@@ -1,9 +1,10 @@
 /* Main Configuration Don't Touch
 	 ========================================================================== */
 // WebFonts
+@import             'bootstrap';
 @import             'fonts.scss';
-$regular    :       "FuturaPT", sans-serif;
-$bold    	:       "FuturaPTDemi", sans-serif;
+$regular    :       "robotoregular", sans-serif;
+$bold    	:       "robotobold", sans-serif;
 
 // WebColors
 $base				:		#ebecf0;
@@ -16,7 +17,7 @@ $border-color		:		#82949D;
 
 
 // Media Query Screen Size's
-$medium     :       50em; //800px
+$medium     :       64em; //800px
 $default    :       64em; //1024px
 $large      :       75em; //1200px
 $xlarge     :       1360px; //1368px

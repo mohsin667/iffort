@@ -1,190 +1,220 @@
-.main-header {
+.site-main-header {
     position: relative;
-    background-color: white;
-    padding: 1rem 0;
-    transition: all 0.4s ease;
-
-    @include media($default) {
-        padding: 24.02px 0;
-    }
-    
-    .navigation {
+    .trigger {
         display: flex;
-        align-items: center;
-        width:calc(100% - 3rem);
-        margin: 0 auto;
         justify-content: space-between;
-        min-height: 5rem;
-
-        @include media($large) {
-            width:calc(100% - 17rem);
+        align-items: flex-end;
+        position: relative;
+        padding: 0 1.5rem;
+        @include media($medium) {
+            display: none;
         }
-        
-        .logo {
-            margin-right: 3.2rem;
-            max-width: 10rem;
-        
-            @include  media($default) {
-                max-width: 16.8rem;
+        a.logo {
+            max-width: 13rem;
+            display: inline-block;
+            margin-top: 2rem;
+            img {
+                width: 100%;
             }
-            a {
-                display: flex;
-                flex-direction: column;
-                span {
-                    padding-left: 5px;
-                    font-size: 1.4rem;
-                    display: none;
-                    @include media($default) {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-        .menu-items {
-            align-items: center;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            
-            @include media($default) {
-                width: calc(100% - 200px);
-                display: flex;
-            }
-            .search-box {
-                position: relative;
-                min-width: 20px;
-                
-
-                input  {
-                    padding-left: 4.7rem;
-                    padding-right: 2rem;
-                    background: #fafafa;
-                    border: 1px solid #EEEEEE;
-                    box-sizing: border-box;
-                    box-shadow: inset 0px 1px 5px rgba(209, 209, 209, 0.5);
-                    border-radius: 25px;
-                    height: 50px;
-                    width: 24rem;
-                    font-size: 1.6rem;
-                    color: #8a8a8a;
-                    display: none;
-                    @include media($default) {
-                        display: block;
-                    }
-                    @include media($large) {
-                        width: 35rem;
-                    }
-                    @include media($xlarge) {
-                        width: 50rem;
-                    }
-                }
-                .search-icon {
-                    position: absolute;
-                    position: absolute;
-                    top: calc(50% - 0.9rem);
-                    left:-1rem;
-                    @include media($default) {
-                        left: 20px;
-                    }
-                    img {
-                        width: 1.8rem;
-                        height: 1.8rem;
-                    }
-                }
-            }
-        }
-        .circle-text {
-            display: flex;
-            align-items: center;
-            .circle {
-                border-right: 1px solid #E3EAF2;
+            @include media($medium) {
                 display: none;
-                @include media($default) {
-                    display: block;
-                }
-                &.c-1 {
-                    a {
-                        background-color: #25C16F;
-                    }
-                }
-                &.c-2 {
-                    a {
-                        background-color: #CC4783;
-                    }
-                }
-                &.c-3 {
-                    a {
-                        background-color: #8847CC;
-                    }
+            }
+        }
+        a.menu {
+            display: flex;
+            flex-direction: column;
+            span {
+                background-color: #fff;
+                width: 20px;
+                height: 2px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    nav {
+        position: fixed;
+        width: 50%;
+        left: 0;
+        z-index: 2;
+        top: 0rem;
+        height: 100%;
+        left: -50%;
+        background-color: #fff;
+        transition: 0.5s ease-in-out;
+        @include media($medium) {
+            background-color: transparent;
+            width: 100%;
+            top: 2rem;
+            height: auto;
+            left: auto;
+        }
+        &.open {
+            left: 0;
+        }
+    }
+    .main-navigation {
+        display: flex;
+        flex-direction: column;
+        @include media($medium) {
+            flex-direction: row;
+        }
+        ul {
+            margin: 0;
+            display: flex;
+            align-items: flex-start;
+            flex-flow: wrap;
+            width: 100%;
+            @include media($medium) {
+                flex-direction: row;
+                align-items: flex-end;
+                width: auto;
+            }
+            li {
+                display: inline-block;
+                margin-bottom: 1.5rem;
+                width: 100%;
+                @include media($medium) {
+                    margin-bottom: 0;
+                    width: auto;
                 }
                 a {
-                    margin:0 0.95rem ;
-                    background-color: #25C16F;
-                    width: 20px;
-                    height: 20px;
-                    font-size: 14px;
-                    border-radius: 100%;
-                    color: #fff;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                &:last-child {
-                    border-right: 0;
-                }
-            }
-            .drop-arrow {
-                margin-left:0.95rem;
-                margin-right: 2.8rem;
-                display: none;
-                @include media($default) {
-                    display: block;
-                }
-            }
-            .notification-bar {
-                display: flex;
-                align-items: center;
-                .btn {
-                    display: none;
-                    margin-right: 1rem;
-                    @include media($default) {
-                        display: block;
+                    color: #000;
+                        margin-right: 2.8rem;
+                    font-size: 1.4rem;
+                    @include media($large) {
+                        font-size: 1.8rem;
+                        color: #fff;
                     }
-                }
-                .notification-logos {
-                    a {
-                        width: 2rem;
-                        margin:0 1rem;
+                    
+                    &.btn {
+                        position: relative;
+                        top: 1rem;
+                        margin-right: 2.8rem;
+                        &:last-child {
+                            margin-right: 0; 
+                        } 
+                    }
+                } 
+                &.button-list {
+                    display: flex;
+                    justify-content: space-between; 
+                    flex-flow:column;
+                    @include media($medium) {
                         display: inline-block;
                     }
+                        a.btn {
+                            padding: 7.5px 23px;
+                            margin-right: 0;
+                            margin-bottom: 15px;
+                            @include media($medium) {
+                                margin-right: 2.8rem;
+                                margin-bottom: 0px;
+                                width: auto;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                            @include media($default) {
+                                padding: 7.5px 47px;
+                            }
+                        }
+                    }
+                
+            }
+        } 
+        .left-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include media($medium) {
+                align-items: flex-end;
+                width: 50%;
+                flex-direction: row;
+            }
+            ul {
+                padding-top: 3rem;
+                @include media($medium) {
+                    padding-top: 0;
+                }
+                li {
+                    
+                &:last-child {
+                    a {
+                        margin-right: 0;
+                    }   
+                }
+                }
+            }
+            .logo{
+                max-width: 16rem;
+                position: relative;
+                margin-right: 2.8rem;
+                margin-bottom: 3rem;
+                top: 2rem;
+                filter: invert(1);
+                @include media($medium) {
+                    filter: invert(0);
+                    top: -0.5rem;
+                    margin-bottom: 0;
+                    display: block;
+                }
+                img {
+                    width: 100%;
                 }
             }
         }
-    }
-}
-.hamburger {
-    display: none;
-    @include media($default) {
-        display: block;
-    }
-    
-    a {
-        margin-left: 1rem;
-        width: 3.8rem;
-        height: 3.8rem;
-        background: $orange;
-        border-radius: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 1rem;
-        span {
+        .right-nav {
             width: 100%;
-            margin: 3px 0;
-            border-radius: 2px;
-            border: 1px solid #fff;
+            display: flex;
+            align-items: flex-start;
+
+            @include media($medium) {
+                align-items: flex-end;
+                width: 50%;
+                flex-direction: row;
+            }
+        }
+    }
+
+    .site-banner {
+        width: 100%;
+        height: calc(100vh - 10rem);
+        background-image: url(../../../assets/img/banner.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 600px; 
+        background-position: center center;
+        position: relative;
+        &::before {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: auto;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        @include media($xxlarge) {
+            max-height: 100%; 
+        }
+        .container,.row,.col {
+            height: 100%;
+        }
+        .inner-content {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 
 }
+body {
+    background-color: #000;
+}
+
+
