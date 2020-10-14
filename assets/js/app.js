@@ -59,5 +59,7 @@ $(document).ready(function () {
           }
       }
       mobSlider()
-      
+    $(window).on("resize",function(){
+        mobSlider()
+    })
 });
