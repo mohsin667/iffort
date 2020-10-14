@@ -8248,11 +8248,20 @@ template {
       position: absolute;
       top: calc(50% - 65px);
       transform: translateY(-50%);
-      text-align: center; }
+      text-align: center;
+      padding: 0 3rem;
+      left: 0; }
+      .site-main-header .site-banner .inner-content br {
+        display: none; }
+        @media screen and (min-width: 64em) {
+          .site-main-header .site-banner .inner-content br {
+            display: block; } }
       @media screen and (min-width: 64em) {
         .site-main-header .site-banner .inner-content {
+          padding: 0;
           top: 50%;
-          text-align: left; } }
+          text-align: left;
+          left: auto; } }
       .site-main-header .site-banner .inner-content h1 {
         font-size: 4.5rem;
         margin-bottom: 1.5rem; }

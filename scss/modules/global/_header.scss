@@ -236,9 +236,19 @@
             top: calc(50% - 65px);
             transform: translateY(-50%);
             text-align: center;
+            padding: 0 3rem;
+            left: 0;
+            br {
+                display: none; 
+                @include media($medium) {
+                    display: block;
+                }
+            }
             @include media($medium) {
+                padding: 0;
                 top: 50%;
                 text-align: left;
+                left: auto;
             }
             h1 {
                 font-size: 4.5rem;
