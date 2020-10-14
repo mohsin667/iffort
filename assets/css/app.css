@@ -8267,7 +8267,8 @@ body {
         overflow-x: hidden; } }
     .global-heading ul li {
       white-space: nowrap;
-      margin-right: 2.8rem; }
+      margin-right: 2.8rem;
+      min-height: 35px; }
       @media screen and (min-width: 64em) {
         .global-heading ul li {
           white-space: initial; } }

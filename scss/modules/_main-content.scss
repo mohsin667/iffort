@@ -20,6 +20,7 @@
         li {
             white-space: nowrap;
             margin-right: 2.8rem;
+            min-height: 35px;
             @include media($medium) {
                 white-space: initial;
             }
