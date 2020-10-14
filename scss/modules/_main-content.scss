@@ -101,6 +101,9 @@ body.hidden {
                 padding: 0 !important;
                 .slick-track {
                     left: 21px;
+                    @include media($small) {
+                        left: 6rem;
+                    }
                 } 
             }
         }
@@ -156,6 +159,9 @@ body.hidden {
             padding: 0 !important;
             .slick-track {
                 left: 21px;
+                @include media($small) {
+                    left: 6rem;
+                }
                 @include media($medium) {
                     left: auto;
                 }

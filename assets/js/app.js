@@ -6,7 +6,6 @@ $(document).ready(function () {
         $("body").toggleClass("hidden")
     })
    
-   
     $(".h-s-slide").on("click", function () {
         $(this).toggleClass("rotate");
         $(".left-side-bar").toggleClass("slideToggle");
@@ -60,4 +59,5 @@ $(document).ready(function () {
           }
       }
       mobSlider()
+      
 });

@@ -8347,6 +8347,9 @@ body.hidden {
         padding: 0 !important; }
         .article-section.t-t-section .artcile-slider .slick-list .slick-track {
           left: 21px; }
+          @media screen and (min-width: 650px) {
+            .article-section.t-t-section .artcile-slider .slick-list .slick-track {
+              left: 6rem; } }
   .article-section .artcile-slider {
     display: flex; }
     .article-section .artcile-slider .artcile-slides {
@@ -8390,6 +8393,9 @@ body.hidden {
       padding: 0 !important; }
       .article-section .artcile-slider .slick-list .slick-track {
         left: 21px; }
+        @media screen and (min-width: 650px) {
+          .article-section .artcile-slider .slick-list .slick-track {
+            left: 6rem; } }
         @media screen and (min-width: 64em) {
           .article-section .artcile-slider .slick-list .slick-track {
             left: auto; } }
