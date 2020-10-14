@@ -9,7 +9,39 @@
         padding-top: 5rem;
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-flow: nowrap;
+
+        @include media($medium) {
+            overflow-x: hidden;
+        }
+        
+        li {
+            white-space: nowrap;
+            margin-right: 2.8rem;
+            @include media($medium) {
+                white-space: initial;
+            }
+            a {
+                font-size: 1.4rem;
+                color: #7b7f85;
+            }
+            &.active {
+                a {
+                    color: $base-blue;
+                    text-decoration: underline;
+                    text-decoration-line: underline;
+                }
+            }
+
+            .search-btn {
+                border: 1px solid #7b7f85;
+                padding: 7.5px 47px;
+                border-radius: 20px;
+            }
+        }
     }
 }
 
@@ -18,7 +50,10 @@ body.hidden {
 }
 
 .article-section {
-    padding: 5rem 0 10rem 0;
+    padding: 3rem 0 4.5rem 0;
+    @include media($medium) {
+        padding: 5rem 0 10rem 0;
+    }
     &.f-a-section {
         background-color: $base-blue;
         .global-heading {
@@ -66,7 +101,7 @@ body.hidden {
         .artcile-slides {
             border-radius: 10px;
             overflow: hidden;
-            height: 450px;
+            height: 400px;
             position: relative;
             @include media($medium) {
                 height: 500px;
