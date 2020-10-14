@@ -8304,7 +8304,7 @@ body.hidden {
           .article-section.f-a-section .artcile-slider .artcile-slides.slick-slide {
             margin: 0 10px; } }
   .article-section.t-t-section {
-    background-color: #fff; }
+    background-color: #f5f5f5; }
     .article-section.t-t-section .artcile-slider {
       flex-flow: wrap;
       justify-content: space-between; }
