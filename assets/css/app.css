@@ -8207,13 +8207,16 @@ template {
           flex-direction: row; } }
   .site-main-header .site-banner {
     width: 100%;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 30rem);
     background-image: url(../img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 600px;
     background-position: center center;
     position: relative; }
+    @media screen and (min-width: 64em) {
+      .site-main-header .site-banner {
+        height: calc(100vh - 10rem); } }
     .site-main-header .site-banner::before {
       content: "";
       background-color: rgba(0, 0, 0, 0.5);
@@ -8233,10 +8236,15 @@ template {
       color: #fff;
       position: absolute;
       top: calc(50% - 65px);
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      text-align: center; }
       @media screen and (min-width: 64em) {
         .site-main-header .site-banner .inner-content {
-          top: 50%; } }
+          top: 50%;
+          text-align: left; } }
+      .site-main-header .site-banner .inner-content h1 {
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem; }
 
 body {
   background-color: #000; }

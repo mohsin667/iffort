@@ -185,13 +185,16 @@
 
     .site-banner {
         width: 100%;
-        height: calc(100vh - 10rem);
+        height: calc(100vh - 30rem);
         background-image: url(../img/banner.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         max-height: 600px; 
         background-position: center center;
         position: relative;
+        @include media($medium) {
+            height: calc(100vh - 10rem);
+        }
         &::before {
             content: "";
             background-color: rgba(0, 0, 0, 0.5);
@@ -214,8 +217,14 @@
             position: absolute;
             top: calc(50% - 65px);
             transform: translateY(-50%);
+            text-align: center;
             @include media($medium) {
                 top: 50%;
+                text-align: left;
+            }
+            h1 {
+                font-size: 4.5rem;
+                margin-bottom: 1.5rem;
             }
         }
     }
