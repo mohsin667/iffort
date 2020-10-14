@@ -32,12 +32,12 @@
         }
     }
     nav {
-        position: fixed;
+        position: absolute;
         width: 50%;
         left: 0;
         z-index: 2;
         top: 0rem;
-        height: 100%;
+        height: 100vh;
         left: -50%;
         background-color: #fff;
         transition: 0.5s ease-in-out;
@@ -78,12 +78,16 @@
                     width: auto;
                 }
                 a {
-                    color: #000;
+                    color: $base-blue;
                         margin-right: 2.8rem;
                     font-size: 1.4rem;
+
+                    @include media($medium) {
+                        color: #fff;
+                    }
+
                     @include media($large) {
                         font-size: 1.8rem;
-                        color: #fff;
                     }
                     
                     &.btn {
@@ -93,6 +97,9 @@
                         &:last-child {
                             margin-right: 0; 
                         } 
+                        &.secondary {
+                            color: #fff;
+                        }
                     }
                 } 
                 &.button-list {
@@ -153,9 +160,7 @@
                 margin-right: 2.8rem;
                 margin-bottom: 3rem;
                 top: 2rem;
-                filter: invert(1);
                 @include media($medium) {
-                    filter: invert(0);
                     top: -0.5rem;
                     margin-bottom: 0;
                     display: block;
@@ -207,8 +212,11 @@
         .inner-content {
             color: #fff;
             position: absolute;
-            top: 50%;
+            top: calc(50% - 65px);
             transform: translateY(-50%);
+            @include media($medium) {
+                top: 50%;
+            }
         }
     }
 

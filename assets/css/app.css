@@ -1,5 +1,10 @@
 /* Main Configuration Don't Touch
 	 ========================================================================== */
+.ind-wrapper {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: calc(97.5rem); }
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7668,9 +7673,17 @@ a {
   text-decoration: none;
   color: inherit; }
 
-@media screen and (min-width: 64em) {
-  br {
-    display: none; } }
+.mob {
+  display: block; }
+  @media screen and (min-width: 64em) {
+    .mob {
+      display: none; } }
+
+.desk {
+  display: none; }
+  @media screen and (min-width: 64em) {
+    .desk {
+      display: block; } }
 
 /**
    * 1. Remove the bottom border in Chrome 57-
@@ -7941,13 +7954,8 @@ template {
 
 .ind-wrapper {
   margin: 0 auto;
-  max-width: calc(100% - 3rem); }
-  @media screen and (min-width: 64em) {
-    .ind-wrapper {
-      max-width: calc(100% - 8rem); } }
-  @media screen and (min-width: 90.1em) {
-    .ind-wrapper {
-      max-width: 144rem; } }
+  padding: 0 1.5rem;
+  max-width: calc(97.5rem); }
 
 .s-b-space {
   margin-bottom: 5rem; }
@@ -8076,12 +8084,12 @@ template {
         height: 2px;
         margin-bottom: 5px; }
   .site-main-header nav {
-    position: fixed;
+    position: absolute;
     width: 50%;
     left: 0;
     z-index: 2;
     top: 0rem;
-    height: 100%;
+    height: 100vh;
     left: -50%;
     background-color: #fff;
     transition: 0.5s ease-in-out; }
@@ -8120,19 +8128,23 @@ template {
             margin-bottom: 0;
             width: auto; } }
         .site-main-header .main-navigation ul li a {
-          color: #000;
+          color: #301685;
           margin-right: 2.8rem;
           font-size: 1.4rem; }
+          @media screen and (min-width: 64em) {
+            .site-main-header .main-navigation ul li a {
+              color: #fff; } }
           @media screen and (min-width: 75em) {
             .site-main-header .main-navigation ul li a {
-              font-size: 1.8rem;
-              color: #fff; } }
+              font-size: 1.8rem; } }
           .site-main-header .main-navigation ul li a.btn {
             position: relative;
             top: 1rem;
             margin-right: 2.8rem; }
             .site-main-header .main-navigation ul li a.btn:last-child {
               margin-right: 0; }
+            .site-main-header .main-navigation ul li a.btn.secondary {
+              color: #fff; }
         .site-main-header .main-navigation ul li.button-list {
           display: flex;
           justify-content: space-between;
@@ -8176,11 +8188,9 @@ template {
         position: relative;
         margin-right: 2.8rem;
         margin-bottom: 3rem;
-        top: 2rem;
-        filter: invert(1); }
+        top: 2rem; }
         @media screen and (min-width: 64em) {
           .site-main-header .main-navigation .left-nav .logo {
-            filter: invert(0);
             top: -0.5rem;
             margin-bottom: 0;
             display: block; } }
@@ -8222,11 +8232,130 @@ template {
     .site-main-header .site-banner .inner-content {
       color: #fff;
       position: absolute;
-      top: 50%;
+      top: calc(50% - 65px);
       transform: translateY(-50%); }
+      @media screen and (min-width: 64em) {
+        .site-main-header .site-banner .inner-content {
+          top: 50%; } }
 
 body {
   background-color: #000; }
+
+.global-heading {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 4rem; }
+  .global-heading h2, .global-heading p {
+    color: #301685; }
+  .global-heading ul {
+    padding-top: 5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+
+body.hidden {
+  overflow: hidden; }
+
+.article-section {
+  padding: 5rem 0 10rem 0; }
+  .article-section.f-a-section {
+    background-color: #301685; }
+    .article-section.f-a-section .global-heading h2, .article-section.f-a-section .global-heading p {
+      color: #fff; }
+    .article-section.f-a-section .artcile-slider {
+      display: flex; }
+      .article-section.f-a-section .artcile-slider .artcile-slides.slick-slide {
+        margin: 0 12px; }
+        @media screen and (min-width: 64em) {
+          .article-section.f-a-section .artcile-slider .artcile-slides.slick-slide {
+            margin: 0 10px; } }
+  .article-section.t-t-section {
+    background-color: #fff; }
+    .article-section.t-t-section .artcile-slider {
+      flex-flow: wrap;
+      justify-content: space-between; }
+      .article-section.t-t-section .artcile-slider .artcile-slides {
+        width: 100%;
+        margin-bottom: 3rem;
+        margin: 0 1rem; }
+        @media screen and (min-width: 64em) {
+          .article-section.t-t-section .artcile-slider .artcile-slides {
+            width: calc(100% / 3 - 1.5rem);
+            margin: 0;
+            margin-bottom: 2.5rem; } }
+      .article-section.t-t-section .artcile-slider .slick-list {
+        padding: 0 !important; }
+        .article-section.t-t-section .artcile-slider .slick-list .slick-track {
+          left: 21px; }
+  .article-section .artcile-slider {
+    display: flex; }
+    .article-section .artcile-slider .artcile-slides {
+      border-radius: 10px;
+      overflow: hidden;
+      height: 450px;
+      position: relative; }
+      @media screen and (min-width: 64em) {
+        .article-section .artcile-slider .artcile-slides {
+          height: 500px;
+          margin-bottom: 3rem; } }
+      .article-section .artcile-slider .artcile-slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
+      .article-section .artcile-slider .artcile-slides::before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: auto;
+        display: inline-block;
+        width: 100%;
+        height: 100%; }
+      .article-section .artcile-slider .artcile-slides .captions {
+        color: #fff;
+        position: absolute;
+        bottom: 3rem;
+        padding: 0 3rem; }
+        .article-section .artcile-slider .artcile-slides .captions h1 {
+          font-size: 3rem; }
+        .article-section .artcile-slider .artcile-slides .captions p {
+          font-size: 1.6rem; }
+        .article-section .artcile-slider .artcile-slides .captions a {
+          font-size: 1.6rem;
+          color: #c3c668;
+          text-decoration: underline; }
+    .article-section .artcile-slider .slick-list {
+      padding: 0 !important; }
+      .article-section .artcile-slider .slick-list .slick-track {
+        left: 21px; }
+        @media screen and (min-width: 64em) {
+          .article-section .artcile-slider .slick-list .slick-track {
+            left: auto; } }
+
+.slick-slider {
+  position: relative; }
+  .slick-slider .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: -5rem;
+    cursor: pointer; }
+    .slick-slider .slick-dots li {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 100%;
+      border: 1px solid #fff;
+      margin: 0 1rem; }
+      .slick-slider .slick-dots li.slick-active {
+        background-color: #fff; }
+      .slick-slider .slick-dots li button {
+        font-size: 0;
+        border: 0;
+        visibility: hidden; }
 
 /* Slider */
 .slick-slider {

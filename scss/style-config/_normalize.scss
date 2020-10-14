@@ -84,11 +84,19 @@
   color: inherit;
   }
 
-  br {
-    @include  media($medium) {
-      display:none;
+  .mob {
+    display: block;
+    @include media($medium) {
+      display: none;
     }
   }
+  .desk {
+    display: none;
+    @include media($medium) {
+      display: block;
+    }
+  }
+
   
   /**
    * 1. Remove the bottom border in Chrome 57-

@@ -1,6 +1,7 @@
 /* Main Configuration Don't Touch
 	 ========================================================================== */
 // WebFonts
+@import             'container';
 @import             'bootstrap';
 @import             'fonts.scss';
 $regular    :       "robotoregular", sans-serif;
@@ -14,6 +15,7 @@ $black      		:       #4B4B4B;
 $red				:		#D82813;
 $footer				:		#F2F2F2;
 $border-color		:		#82949D;
+$base-blue			:		#301685;
 
 
 // Media Query Screen Size's
