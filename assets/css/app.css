@@ -8082,7 +8082,18 @@ template {
         background-color: #fff;
         width: 20px;
         height: 2px;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        position: relative;
+        transition: 0.3s ease-out; }
+      .site-main-header .trigger a.menu.rotate span:nth-child(2) {
+        display: none; }
+      .site-main-header .trigger a.menu.rotate span:nth-child(1) {
+        transform-origin: center;
+        transform: rotate(45deg); }
+      .site-main-header .trigger a.menu.rotate span:nth-child(3) {
+        transform-origin: center;
+        transform: rotate(-45deg);
+        top: -7px; }
   .site-main-header nav {
     position: absolute;
     width: 50%;
@@ -8403,8 +8414,11 @@ body.hidden {
     .main-footer-block .footer-block .main-logo {
       display: flex;
       align-items: center;
-      flex-flow: wrap;
+      flex-flow: column;
       justify-content: center; }
+      @media screen and (min-width: 64em) {
+        .main-footer-block .footer-block .main-logo {
+          flex-flow: row; } }
       .main-footer-block .footer-block .main-logo img {
         max-width: 160px;
         margin-bottom: 3rem; }
@@ -8473,7 +8487,11 @@ footer {
         width: 100%;
         position: relative;
         max-width: 360px;
-        margin-bottom: 4rem; }
+        margin-bottom: 4rem;
+        margin-top: 4rem; }
+        @media screen and (min-width: 64em) {
+          footer .list-block .right-menu .social-row {
+            margin-top: 0; } }
         footer .list-block .right-menu .social-row:after {
           content: '';
           width: 100%;
@@ -8511,6 +8529,8 @@ footer {
   align-items: center;
   justify-content: center;
   padding-top: 2.5rem; }
+  .cta-row .btn {
+    font-size: 1.4rem; }
   .cta-row .btn.secondary:hover {
     color: #301685; }
 

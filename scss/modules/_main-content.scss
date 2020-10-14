@@ -197,8 +197,11 @@ body.hidden {
         .main-logo {
             display: flex;
             align-items: center;
-            flex-flow: wrap;
+            flex-flow: column;
             justify-content: center;
+            @include media($medium) {
+                flex-flow: row;
+            }
             img {
                 max-width: 160px;
                 margin-bottom: 3rem;
@@ -282,6 +285,10 @@ footer {
                 position: relative;
                 max-width: 360px;
                 margin-bottom: 4rem;
+                margin-top: 4rem;
+                @include media($medium) {
+                    margin-top: 0;
+                }
                 &:after {
                     content: '';
                     width: 100%;
@@ -338,6 +345,9 @@ footer {
     align-items: center;
     justify-content: center;
     padding-top: 2.5rem;
+    .btn {
+        font-size: 1.4rem;
+    }
     .btn.secondary {
         &:hover {
             color: $base-blue;

@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     $(".menu").on("click",function(){
+        $(this).toggleClass("rotate");
         $("nav").toggleClass("open")
         $("body").toggleClass("hidden")
     })
